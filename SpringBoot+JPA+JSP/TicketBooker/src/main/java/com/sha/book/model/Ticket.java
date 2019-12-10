@@ -7,14 +7,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Setter
 @Getter
 @NoArgsConstructor
+@ToString
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -23,5 +27,6 @@ public class Ticket {
 	private String address;
 	private String source;
 	private String destination;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date bookingDate;
 }

@@ -1,8 +1,5 @@
 package com.sha.book.service;
 
-import java.util.Date;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,17 +7,14 @@ import com.sha.book.dao.TicketRepository;
 import com.sha.book.model.Ticket;
 
 @Service
-public class TicketService {
+public class BookService {
 
 	@Autowired
 	TicketRepository ticketRepo;
 
-	public Ticket getTicket(Long id) {
-		Ticket ticket = null;
-		Optional<Ticket> findById = ticketRepo.findById(id);
-		if (findById.isPresent())
-			ticket = findById.get();
-		return ticket;
+	public void bookTicket(Ticket ticket) {
+		Ticket save = ticketRepo.save(ticket);
+		System.out.println("saved ticket id" + ticket.getId());
 	}
 
 }
