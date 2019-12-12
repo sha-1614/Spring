@@ -15,10 +15,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Setter
-@Getter
-@NoArgsConstructor
-@ToString
+@Setter @Getter @ToString
 public class Ticket {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

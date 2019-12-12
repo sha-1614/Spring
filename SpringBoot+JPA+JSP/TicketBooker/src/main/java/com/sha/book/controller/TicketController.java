@@ -1,5 +1,8 @@
 package com.sha.book.controller;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,11 +19,15 @@ public class TicketController {
 	TicketService ticketService;
 
 	@GetMapping(value = "/ticket/{id}")
-	public ModelAndView getTicket(@PathVariable Long id, ModelAndView model) {
+	public ModelAndView getTicket(@PathVariable Long id) {
 		Ticket ticket = ticketService.getTicket(id);
-		model.setViewName("ticket_view");
-		model.addObject("ticket", ticket);
-		System.out.println("Entered into controller....!");
-		return model;
+		return new ModelAndView("ticket_view", "ticketList", Arrays.asList(ticket));
+	}
+
+	@GetMapping(value = "/ticket")
+	public ModelAndView getAllTickets(ModelAndView model) {
+		List<Ticket> ticketList = ticketService.getAllTickets();
+		System.out.println("ticketList size:" + ticketList.size());
+		return new ModelAndView("ticket_view", "ticketList", ticketList);
 	}
 }
