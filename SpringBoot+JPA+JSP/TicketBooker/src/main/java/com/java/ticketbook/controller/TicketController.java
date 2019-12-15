@@ -1,4 +1,4 @@
-package com.sha.book.controller;
+package com.java.ticketbook.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sha.book.model.Ticket;
-import com.sha.book.service.TicketService;
+import com.java.ticketbook.model.Ticket;
+import com.java.ticketbook.service.TicketService;
 
 @RestController
 public class TicketController {

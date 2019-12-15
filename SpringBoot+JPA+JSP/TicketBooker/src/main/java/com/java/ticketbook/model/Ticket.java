@@ -1,4 +1,4 @@
-package com.sha.book.model;
+package com.java.ticketbook.model;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.sha.book;
+package com.java.ticketbook;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

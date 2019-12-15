@@ -1,9 +1,10 @@
-package com.sha.book.dao;
+package com.java.ticketbook.dao;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.sha.book.model.Ticket;
+
+import com.java.ticketbook.model.Ticket;
 
 @Repository
 @EntityScan(basePackages = "com.sha.book.model")

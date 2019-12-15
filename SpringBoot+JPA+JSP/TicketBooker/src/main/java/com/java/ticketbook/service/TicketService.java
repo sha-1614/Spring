@@ -1,4 +1,4 @@
-package com.sha.book.service;
+package com.java.ticketbook.service;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,8 +8,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.sha.book.dao.TicketRepository;
-import com.sha.book.model.Ticket;
+import com.java.ticketbook.dao.TicketRepository;
+import com.java.ticketbook.model.Ticket;
 
 @Service
 public class TicketService {
