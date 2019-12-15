@@ -2,8 +2,13 @@ server:
   port: 8080
 spring:  mvc:    view:      prefix: /WEB-INF/jsp/
       suffix: .jsp
-  jpa:    hibernate:      ddl-auto: update 
-    show-sql: true
-  datasource:    data-username: root
-    data-password: MySQL123$$
+  datasource:     username: root
+    password: MySQL123$$
     url: jdbc:mysql://localhost:3306/TicketDB
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
